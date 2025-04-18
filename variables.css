@@ -1,0 +1,23 @@
+/*STYLE COMMUN POUR LES ELEMENTS DE LA PAGE*/
+
+:root {
+    /*couleur*/
+    --main-bg-color: #eaecd4;
+    
+    --accent-beige: #d0ac8e;
+   
+    --primary-color-light: #bbccaf;
+    --primary-color-normal: #80977b;
+    
+    --text-normal: #4E3934;
+    --text-dark: #4c4404;
+
+
+    /*police d'écriture*/
+    --font-family: Arial, sans-serif;
+    --font-size: 1rem;
+
+    /*taille*/
+    --padding: 10px;
+    --margin: 10px;
+}
