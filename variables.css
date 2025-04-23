@@ -12,12 +12,35 @@
     --text-normal: #4E3934;
     --text-dark: #4c4404;
 
+    /*coutour de texte*/
+    --font-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6),
+                    1px -1px 0 rgba(0, 0, 0, 0.6),
+                    1px  1px 0 rgba(0, 0, 0, 0.6),
+                   -1px  1px 0 rgba(0, 0, 0, 0.6),
+                    1.5px 1.5px 2.5px rgba(0, 0, 0, 0.8);
+    --font-light: -1px -1px 0 rgba(255, 255, 255, 0.6),
+                    1px -1px 0 rgba(255, 255, 255, 0.6),
+                    1px  1px 0 rgba(255, 255, 255, 0.6),
+                   -1px  1px 0 rgba(255, 255, 255, 0.6),
+                    1.5px 1.5px 2.5px rgba(255, 255, 255, 0.8);
 
     /*police d'écriture*/
     --font-family: Arial, sans-serif;
     --font-size: 1rem;
+    --font-size-large: 2rem;
+    --font-size-xlarge: 2.5rem;
+    --font-size-xxlarge: 3rem;
 
     /*taille*/
-    --padding: 10px;
-    --margin: 10px;
+    --padding-xs: 0.5em;
+    --padding-s: 1em;
+    --padding-m: 1.5em;
+    --padding-l: 2em;
+    --padding-xl: 5em;
+    --margin-xs: 0.5em;
+    --margin-s: 1em;
+    --margin-m: 1.5em;
+    --margin-l: 2em;
+    --margin-xl: 2.5em;
+    --margin-xxl: 5em;
 }

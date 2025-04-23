@@ -1,0 +1,196 @@
+/*MISE EN PAGE GLOBALE*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*LA PAGE*/
+body{
+    font-family: var(--font-family);
+    color: var(--text-normal);
+    font-size: var(--font-size);
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 2fr 2fr 2.5fr 2fr 1fr;
+    grid-template-areas: 
+        "nav nav"
+        "header header"
+        "h1 h1"
+        "picture picture"
+        "mission mission"
+        "about contact"
+        "dashboard dashboard"
+        "footer footer";
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/*LA BARRE DE NAVIGATION*/
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-shadow: var(--font-shadow);
+    align-items: flex-start;
+    font-size: var(--font-size-large);
+    padding: var(--padding-s) var(--padding-m) var(--padding-xl) var(--padding-m);
+}
+
+.logo{
+    text-shadow: var(--font-light);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    margin: 0 0 0 var(--margin-m);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+li:nth-child(1) a{
+    color: var(--accent-beige) !important;
+}
+li:nth-child(2) a{
+    color: var(--primary-color-light) !important;
+}
+li:nth-child(3) a{
+    color: var(--primary-color-normal) !important;
+}
+
+/*LE HAUT DE PAGE*/
+header{
+    grid-area: header;
+    text-align: center;
+    align-content: center;
+    color: var(--text-dark);
+    font-size: var(--font-size);
+    margin: var(--margin-xs) var(--margin-xxl);
+    padding: var(--padding-xs);
+    width: auto;
+    border-top: 1px solid var(--text-normal);
+    border-bottom: 1px solid var(--text-normal);
+}
+
+/*LE TITRE PRINCIPALE*/
+h1{
+    grid-area: h1;
+    font-size: var(--font-size-xlarge);
+    width: auto;
+    margin: var(--margin-xs) var(--margin-l);
+}
+
+
+/*LE CONTENU PRINCIPAL*/
+
+/*les titres du contenu principal*/
+h2{
+    font-size: var(--font-size-large);
+    margin-bottom: var(--margin-s);
+    color: var(--main-bg-color);
+}
+
+/*les paragraphes du contenu principal*/
+p{
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/*les images*/
+#picture{
+    grid-area: picture;
+    display: flex;
+    width: 100vw;
+}
+img{
+    flex: 1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+/*la description des différentes missions*/
+#mission{
+    grid-area: mission;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xl);
+    background-color: var(--accent-beige);
+}
+
+/*l'objectif du projet*/
+#about{
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xl);
+    background-color: var(--primary-color-light);
+}
+
+/*le formulaire de contact*/
+#contact{
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xl);
+    background-color: var(--primary-color-normal);
+}
+#contact input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+#contact button{
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #ccc;
+    align-self: flex-end;
+}
+
+/*le tableau de bord*/
+#dashboard{
+    grid-area: dashboard;
+    display: flex;
+    flex-direction: column;
+    grid-area: dashboard;
+    padding: var(--padding-xl);
+    background-color: var(--main-bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#dashboard h2{
+    color: var(--text-dark);
+}
+
+/*LE PIED DE PAGE*/
+#footer{
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    padding: var(--padding-m) var(--padding-xl);
+    border-top: 1px solid var(--text-normal);
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+}
+#footer ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-decoration: underline;
+}
