@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="variables.css">
+    <script src="pictures.js" defer></script>
     <title>Carbon Copy</title>
 </head>
 <body>
@@ -44,13 +45,29 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Tell us who you are!</p>
-        <input type="text" placeholder="Your Name" />
-        <button type="submit">Introduce yourself</button>
+        <input type="text" id="name" placeholder="Your Name" />
+        <button type="submit" id="buttonSubmit">Introduce yourself</button>
     </section>
 
     <section id="dashboard">
         <h2>Dashboard</h2>
-        <p>Coming soon, stay tuned!</p>
+        <div id="card-container">
+            <div class="card" id="card1">
+                <h3>🎨 Tactile Library</h3>
+                <h4>Explore endless surfaces</h4>
+                <p>Dive into our curated collection of high-resolution textures, from soft organic fabrics to raw industrial finishes. Designed to inspire artists, designers, and makers of all kinds.</p>
+            </div>
+            <div class="card" id="card2">
+                <h3>🧪 Material Lab</h3>
+                <h4>Where innovation meets feel</h4>
+                <p>We experiment with new material blends and visual effects to push the boundaries of surface design. Our lab is your gateway to the next visual revolution.</p>
+            </div>
+            <div class="card" id="card3">
+                <h3>🌍 Inspired by Nature</h3>
+                <h4>From earth to screen</h4>
+                <p>Nature is our blueprint. We transform grains, patterns, and imperfections found in the wild into versatile design assets, reconnecting creativity with the raw world.</p>
+            </div>
+        </div>
     </section>
 
     <footer id="footer">

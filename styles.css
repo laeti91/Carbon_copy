@@ -103,9 +103,23 @@ h2{
     color: var(--main-bg-color);
 }
 
+h3{
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--margin-xs);
+    color: var(--accent-blue-silver);
+}
+
+h4{
+    font-size: var(--font-size);
+    margin-bottom: var(--margin-l);
+    color: rgba(80, 76, 89, 0.7);
+    text-shadow: 1px 1px rgb(234, 236, 212);
+    font-style: italic;
+}
+
 /*les paragraphes du contenu principal*/
 p{
-    font-size: 1em;
+    font-size: var(--font-size);
     line-height: 1.5;
 }
 
@@ -113,14 +127,20 @@ p{
 #picture{
     grid-area: picture;
     display: flex;
-    width: 100vw;
+    width: 100vw; /*prend toute la largeur de l'écran*/
 }
 img{
-    flex: 1;
+    flex: 1; /*chaque image prend une part de la largeur de la div picture*/
     object-fit: cover;
-    width: 100%;
+    width: 100%; /*prend 100% de son parent*/
     height: auto;
 }
+
+/*inversion des images js*/
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
 /*la description des différentes missions*/
 #mission{
     grid-area: mission;
@@ -164,6 +184,16 @@ img{
     align-self: flex-end;
 }
 
+/*message ajouté en js à la place du contenu de contact hors titre*/
+.message{
+    position: relative;
+    font-size: var(--font-size-medium);
+    color: var(--text-dark);
+    font-weight: bold;
+    padding: var(--padding-m);
+    z-index: 10;
+}
+
 /*le tableau de bord*/
 #dashboard{
     grid-area: dashboard;
@@ -176,6 +206,52 @@ img{
 }
 #dashboard h2{
     color: var(--text-dark);
+}
+
+/*les cartes*/
+#card-container{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    position: relative;
+    flex: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20%;
+    padding: var(--padding-l);
+    background-color: rgba(221, 221, 246, 0.4); /*filtre de couleur sur la carte*/
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.card::before{ /*filtre au dessus du background*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    opacity: 0.15;
+    border-radius: 20%;
+    z-index: 0;
+}
+
+.card *{ /*texte et filtre de couleur au dessus de l'image*/
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover{ /*au survol de la carte*/
+    transform: translateY(-5px);
+}
+
+#card1::before{ /*image en backup*/
+    background-image: url("pictures/bg-card1.jpg");
+}
+#card2::before{
+    background-image: url("pictures/bg-card2.jpg");
+}
+#card3::before{
+    background-image: url("pictures/bg-card3.jpg");
 }
 
 /*LE PIED DE PAGE*/

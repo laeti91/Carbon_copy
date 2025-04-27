@@ -2,15 +2,20 @@
 
 :root {
     /*couleur*/
-    --main-bg-color: #eaecd4;
+    --main-bg-color: rgb(234, 236, 212);
     
-    --accent-beige: #d0ac8e;
+    --accent-beige: rgb(208, 172, 142);
+    --accent-blue: rgba(134, 136, 166, 0.8);
+    --accent-blue-silver: rgb(80, 76, 89);
    
     --primary-color-light: #bbccaf;
-    --primary-color-normal: #80977b;
+    --primary-color-normal: rgb(128, 151, 123);
     
-    --text-normal: #4E3934;
-    --text-dark: #4c4404;
+    --text-normal: rgb(78, 57, 52);
+    --text-dark: rgb(76, 68, 4);
+    --text-light: rgb(193, 214, 188);
+    --text-dark-version2: rgb(56, 51, 67);
+    --text-light-version2: rgb(224, 213, 203);
 
     /*coutour de texte*/
     --font-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6),
@@ -27,6 +32,7 @@
     /*police d'écriture*/
     --font-family: Arial, sans-serif;
     --font-size: 1rem;
+    --font-size-medium: 1.5rem;
     --font-size-large: 2rem;
     --font-size-xlarge: 2.5rem;
     --font-size-xxlarge: 3rem;
